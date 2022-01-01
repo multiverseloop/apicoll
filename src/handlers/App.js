@@ -4,16 +4,19 @@ const retreiveStatus = require('../CollectionsStatus/RetrieveStatus');
 
 exports.handler = async (event) => {
 console.log('in App.js')
-requestbody = JSON.stringify(event.body.email)
-console.log(requestbody)
-console.log(requestbody)
+console.log(event.body)
+console.log("JSON Parse")
+const requestjsonparse = JSON.parse(event.body)
+console.log(requestjsonparse)
+const email = requestjsonparse.email
+console.log(email)
 
 switch(event.path) {
     case "/retrievestatus":
         try {
             console.log("Trying to find email records")
             console.log(event.body.email)
-            const response = await retrieveStatus(requestbody);
+            const response = await retrieveStatus(event.body.email);
             console.log(response)
         return {
             "statusCode":200,
