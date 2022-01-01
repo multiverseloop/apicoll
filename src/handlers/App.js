@@ -9,8 +9,8 @@ switch(event.path) {
     case "/retrievestatus":
         try {
             console.log("Trying to find email records")
-            console.log(event.body)
-            const response = await retrieveStatus(event.body);
+            console.log(event.body.email)
+            const response = await retrieveStatus(event.body.email);
             console.log(response)
         return {
             "statusCode":200,
