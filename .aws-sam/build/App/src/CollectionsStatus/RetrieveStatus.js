@@ -11,7 +11,7 @@ async function retrieveStatus(req) {
 console.log(req);
 const table = "collectionsDetails";
 const Key = {
-  email: "bulususashank@gmail.com" // Change to your recipient       
+  email: req.body.email// Change to your recipient       
 }
 const params = {
   TableName:table,
