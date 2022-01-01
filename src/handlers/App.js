@@ -16,7 +16,7 @@ switch(event.path) {
         try {
             console.log("Trying to find email records")
             console.log(requestjsonparse)
-            const response = await retrieveStatus(requestjsonparse);
+            const response = await retrieveStatus(email);
             console.log(response)
         return {
             "statusCode":200,
