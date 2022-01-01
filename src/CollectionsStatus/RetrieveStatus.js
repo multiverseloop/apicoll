@@ -9,10 +9,9 @@ var docClient = new AWS.DynamoDB.DocumentClient();
   
 async function retrieveStatus(req) {
 console.log(req);
-request = JSON.stringify(req)
 const table = "collectionsDetails";
 const Key = {
-  email: request.body.email// Change to your recipient       
+  email: req.email // Change to your recipient       
 }
 const params = {
   TableName:table,
