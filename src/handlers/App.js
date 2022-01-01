@@ -4,6 +4,9 @@ const retreiveStatus = require('../CollectionsStatus/RetrieveStatus');
 
 exports.handler = async (event) => {
 console.log('in App.js')
+requestbody = JSON.stringify(event.body)
+console.log(requestbody)
+console.log(requestbody.email)
 
 switch(event.path) {
     case "/retrievestatus":
