@@ -8,7 +8,11 @@ console.log(event)
 try {
 const response = await retrieveStatus(event);
 console.log(response)
-return response
+return {
+    "statusCode":200,
+    "body":response,
+    "isBase64Encoded": false
+}
 } catch(error) {
     return { error: err }
 }
