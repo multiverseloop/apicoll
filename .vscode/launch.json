@@ -1,0 +1,43 @@
+{
+    "configurations": [
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "Invoke Lambda",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "/template.yml",
+                "logicalId": "App"
+            },
+            "lambda": {
+                "payload": {
+                    "json": {
+                        "path": "pathvalue",
+                        "email": "bulususashank@gmail.com"
+                    }
+                }
+            }
+        },
+
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "apicoll:src/handlers/App.handler (nodejs14.x)",
+            "invokeTarget": {
+                "target": "code",
+                "projectRoot": "/",
+                "lambdaHandler": "src/handlers/App.handler"
+            },
+            "lambda": {
+                "runtime": "nodejs14.x",
+                "payload": {
+                    "json": {
+                        "path": "pathvalue",
+                        "email": "bulususashank@gmail.com"
+                    }
+                },
+                "environmentVariables": {}
+            }
+        }
+    ]
+}
