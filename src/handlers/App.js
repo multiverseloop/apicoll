@@ -21,6 +21,7 @@ switch(event.path) {
         return {
             "statusCode":200,
             "body":response,
+            "headers":{"Access-Control-Allow-Origin": "*"},
             "isBase64Encoded": false
             }
         } catch(error) {
