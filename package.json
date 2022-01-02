@@ -4,6 +4,7 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
+        "@sendgrid/mail": "^7.6.0",
         "@stripe/stripe-js": "^1.22.0",
         "aws-sdk": "^2.1048.0",
         "stripe": "^8.195.0"

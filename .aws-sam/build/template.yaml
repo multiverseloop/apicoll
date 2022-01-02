@@ -3,6 +3,9 @@ Description: Start from scratch starter project
 Transform: AWS::Serverless-2016-10-31
 Globals:
   Function:
+    Environment:
+      Variables:
+        SENDGRID_API_KEY: null
     PermissionsBoundary:
       Fn::Sub: arn:${AWS::Partition}:iam::${AWS::AccountId}:policy/${AppId}-${AWS::Region}-PermissionsBoundary
 Parameters:

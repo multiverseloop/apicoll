@@ -15,6 +15,9 @@ Transform: AWS::Serverless-2016-10-31
 # https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
   Function:
+    Environment:
+      Variables:
+        SENDGRID_API_KEY:
     # The PermissionsBoundary allows users to safely develop with their function's permissions constrained
     # to their current application. All the functions and roles in this application have to include it and
     # it has to be manually updated when you add resources to your application.
