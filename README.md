@@ -1,3 +1,22 @@
+***Important Information for local SAM Testing***
+Testing Files
+1) createstatuslocalevent.json - local test file for createstatus in dynamo
+2) retrievestatuslocalevent.json - local test file for retrievestatus from dynamno
+
+Testing Lambda Locally
+Afteryou have done the initial setup of SAM CLI and AWS CLI, Lambdas can be tested locally and it is a good practise to always test locally before pushing to git. 
+
+After you make the changes to the files
+1) You have to be in the root folder of the project in terminal
+2) Run sam build to build the application.
+3) To test createstatus api gateway trigger , run "sam local invoke -e createstatuslocalevent.json"
+4) This will invoke the App handler using the createstatuslocalevent.json. 
+5) You can generate your own test JSON by running something like - 
+sam local generate-event apigateway aws-proxy --path createstatus --body {"email":"bulususashank@gmail.com"} > createstatuslocalevent.json
+6) You can then adjust the event as per your requirement and then pass the JSON file as an event to the sam invoke command. 
+
+
+
 # Start from scratch starter project
 
 This project contains source code and supporting files for the serverless application that you created in the AWS Lambda console. You can update your application at any time by committing and pushing changes to your AWS CodeCommit or GitHub repository.
@@ -114,7 +133,7 @@ To use the AWS SAM CLI with this sample, you need the following tools:
 
 Build your application with the `sam build` command.
 
-```bash
+
 my-application$ sam build -m package.json
 ```
 
