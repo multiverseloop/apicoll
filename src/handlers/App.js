@@ -1,5 +1,6 @@
 const createStatus = require('../CollectionsStatus/CreateStatus');
 const retrieveStatus = require('../CollectionsStatus/RetrieveStatus');
+const UpdateStatus = require('../CollectionsStatus/UpdateStatus');
 
 
 
@@ -35,6 +36,23 @@ switch(event.path) {
             console.log("creating a new login")
             console.log(requestjsonparse)
             const response = await createStatus(requestjsonparse);
+            console.log(response)
+        return {
+            "statusCode":200,
+            "body":response,
+            "headers":{"Access-Control-Allow-Origin": "*"},
+            "isBase64Encoded": false
+            }
+        } catch(error) {
+            return { error: "error" }
+        }
+    break;
+
+    case "/updatestatus":
+        try {
+            console.log("Updating the status")
+            console.log(requestjsonparse)
+            const response = await UpdateStatus(requestjsonparse);
             console.log(response)
         return {
             "statusCode":200,
