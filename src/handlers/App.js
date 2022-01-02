@@ -1,6 +1,7 @@
 const createStatus = require('../CollectionsStatus/CreateStatus');
 const retrieveStatus = require('../CollectionsStatus/RetrieveStatus');
 const UpdateStatus = require('../CollectionsStatus/UpdateStatus');
+const createpaymentintent = require('../Stripe/createpaymentintent');
 
 
 
@@ -53,6 +54,23 @@ switch(event.path) {
             console.log("Updating the status")
             console.log(requestjsonparse)
             const response = await UpdateStatus(requestjsonparse);
+            console.log(response)
+        return {
+            "statusCode":200,
+            "body":response,
+            "headers":{"Access-Control-Allow-Origin": "*"},
+            "isBase64Encoded": false
+            }
+        } catch(error) {
+            return { error: "error" }
+        }
+    break;
+
+    case "/createpaymentintent":
+        try {
+            console.log("creating payment intent")
+            console.log(requestjsonparse)
+            const response = await createpaymentintent(requestjsonparse);
             console.log(response)
         return {
             "statusCode":200,

@@ -1,7 +1,7 @@
 {
-  "body": "{\"email\":\"bulususashank@gmail.com\",\"collectionsStatus\":\"CONFIRMED_PAYMENT\",\"resolvedStatus\":true,\"resolvedData\":{\"CPDate\":\"2022-01-01\"}}",
+  "body": "{\"amount\":100}",
   "resource": "/{proxy+}",
-  "path": "/updatestatus",
+  "path": "/createpaymentintent",
   "httpMethod": "POST",
   "isBase64Encoded": false,
   "queryStringParameters": {
@@ -13,7 +13,7 @@
     ]
   },
   "pathParameters": {
-    "proxy": "/updatestatus"
+    "proxy": "/createpaymentintent"
   },
   "stageVariables": {
     "baz": "qux"
@@ -115,7 +115,7 @@
       "userAgent": "Custom User Agent String",
       "user": null
     },
-    "path": "/prod/updatestatis",
+    "path": "/prod/createpaymentintent",
     "resourcePath": "/{proxy+}",
     "httpMethod": "POST",
     "apiId": "1234567890",

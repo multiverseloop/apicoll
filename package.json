@@ -4,7 +4,9 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
-        "aws-sdk": "^2.1048.0"
+        "@stripe/stripe-js": "^1.22.0",
+        "aws-sdk": "^2.1048.0",
+        "stripe": "^8.195.0"
     },
     "devDependencies": {
         "jest": "^25.4.0"
