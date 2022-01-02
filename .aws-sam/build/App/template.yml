@@ -17,7 +17,7 @@ Globals:
   Function:
     Environment:
       Variables:
-        SENDGRID_API_KEY:
+        SENDGRID_API_KEY: test
     # The PermissionsBoundary allows users to safely develop with their function's permissions constrained
     # to their current application. All the functions and roles in this application have to include it and
     # it has to be manually updated when you add resources to your application.

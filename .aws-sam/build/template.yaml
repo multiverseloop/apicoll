@@ -5,7 +5,7 @@ Globals:
   Function:
     Environment:
       Variables:
-        SENDGRID_API_KEY: null
+        SENDGRID_API_KEY: test
     PermissionsBoundary:
       Fn::Sub: arn:${AWS::Partition}:iam::${AWS::AccountId}:policy/${AppId}-${AWS::Region}-PermissionsBoundary
 Parameters:
