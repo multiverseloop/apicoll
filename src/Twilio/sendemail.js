@@ -5,7 +5,10 @@ async function sendemail(req) {
 
 const params = {
     to:req.email,
-    from:"test@collections.sayshank.com",
+    from:{
+        "email":"test@collections.sayshank.com",
+        "name":"Bank of Naboo"
+    },
     templateId:req.templateId
 }
 
