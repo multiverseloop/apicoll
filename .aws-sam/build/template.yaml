@@ -24,3 +24,6 @@ Resources:
       Policies:
       - AWSLambdaBasicExecutionRole
       - AmazonDynamoDBFullAccess
+      - AmazonLexFullAccess
+    Metadata:
+      SamResourceId: App

@@ -1,5 +1,5 @@
 {
-  "body": "{\"email\":\"bulususashank@gmail.com\",\"templateId\":\"d-489a0233899545f1ad051bc48b2306ef\"}",
+  "body": "{\"email\":\"shashankmisra@fico.com\",\"templateId\":\"d-489a0233899545f1ad051bc48b2306ef\"}",
   "resource": "/{proxy+}",
   "path": "/sendmail",
   "httpMethod": "POST",

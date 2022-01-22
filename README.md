@@ -3,7 +3,7 @@ Testing Files
 1) createstatuslocalevent.json - local test file for createstatus in dynamo
 2) retrievestatuslocalevent.json - local test file for retrievestatus from dynamo
 3) updatestatuslocalevent.json - local test file for updatestatus in dynamo
-4)sendemail.json - local test file for sending email via twilio
+4) sendemail.json - local test file for sending email via twilio
 
 Testing Lambda Locally
 We want to avoid pushing non-tested code to git or AWS. So testing locally is always suggested. After you have done the initial setup of SAM CLI and AWS CLI, Lambdas can be tested locally and it is a good practise to always test locally before pushing to git. 

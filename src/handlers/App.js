@@ -1,8 +1,10 @@
 const createStatus = require('../CollectionsStatus/CreateStatus');
 const retrieveStatus = require('../CollectionsStatus/RetrieveStatus');
 const UpdateStatus = require('../CollectionsStatus/UpdateStatus');
+const postContent = require('../Lex/postcontent');
 const createpaymentintent = require('../Stripe/createpaymentintent');
 const sendemail = require('../Twilio/sendemail');
+
 
 
 
@@ -89,6 +91,22 @@ switch(event.path) {
             console.log("sending email")
             console.log(requestjsonparse)
             const response = await sendemail(requestjsonparse);
+            console.log(response)
+        return {
+            "statusCode":200,
+            "body":response,
+            "headers":{"Access-Control-Allow-Origin": "*"},
+            "isBase64Encoded": false
+            }
+        } catch(error) {
+            return { error: "error" }
+        }
+    break;
+    case "/postcontent":
+        try {
+            console.log("posting contents to Lex")
+            console.log(requestjsonparse)
+            const response = await postContent(requestjsonparse);
             console.log(response)
         return {
             "statusCode":200,

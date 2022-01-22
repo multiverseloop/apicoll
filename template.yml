@@ -48,3 +48,4 @@ Resources:
         # Give Lambda basic execution Permission to the helloFromLambda
         - AWSLambdaBasicExecutionRole
         - AmazonDynamoDBFullAccess
+        - AmazonLexFullAccess

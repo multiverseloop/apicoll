@@ -1,7 +1,7 @@
 {
-  "body": "{\"email\":\"shashankmisra@fico.com\",\"templateId\":\"d-489a0233899545f1ad051bc48b2306ef\"}",
+  "body": "{\"userId\":\"shashnak123\",\"message\":\"i already made a payment\"}",
   "resource": "/{proxy+}",
-  "path": "/sendmail",
+  "path": "/postcontent",
   "httpMethod": "POST",
   "isBase64Encoded": false,
   "queryStringParameters": {
@@ -13,7 +13,7 @@
     ]
   },
   "pathParameters": {
-    "proxy": "/sendmail"
+    "proxy": "/postcontent"
   },
   "stageVariables": {
     "baz": "qux"
@@ -115,7 +115,7 @@
       "userAgent": "Custom User Agent String",
       "user": null
     },
-    "path": "/prod/sendmail",
+    "path": "/prod/postcontent",
     "resourcePath": "/{proxy+}",
     "httpMethod": "POST",
     "apiId": "1234567890",
