@@ -25,5 +25,3 @@ Resources:
       - AWSLambdaBasicExecutionRole
       - AmazonDynamoDBFullAccess
       - AmazonLexFullAccess
-    Metadata:
-      SamResourceId: App
